@@ -58,7 +58,7 @@ function generatePassword() {
     }
     return password
   }
-  
+
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
@@ -70,3 +70,23 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
+
+let copyBtn = document.querySelector("#copy");
+console.log(copyBtn)
+
+  var passwordDisplayed;
+  
+
+function copyPassword() {
+  var copyText = document.getElementById("password");
+  var text = copyText.textContent;
+  if (text.length > 0) {
+      copyText.select();
+      copyText.setSelectionRange(0, 99999)
+      document.execCommand("copyPassword");
+      alert("Your password has been copied to clipboard.");
+  }
+}
+
+copyBtn.addEventListener("click", copyPassword);
