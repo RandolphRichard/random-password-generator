@@ -1,8 +1,19 @@
 // Assignment code here
+let generateBtn = document.querySelector("#generate");
+console.log(generateBtn)
 
+//This is the reference for the Array
 
-// Get references to the #generate element
-var generateBtn = document.querySelector("#generate");
+var lowerCaseCharacter ="abcdefghijklmnopqrstuvwxyz";
+
+var upperCaseCharacter ="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+var numericCharacter = "0123456789";
+
+var specialCharacter ="!@#$%^&*()_-+={[}]|:;<>.?/";
+
+let everyCharacter = "";
+
 
 // Write password to the #password input
 function writePassword() {
