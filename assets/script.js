@@ -39,9 +39,26 @@ function generatePassword() {
     if (askSpecialCharacters){
       everyCharacter += specialCharacter
     };
- 
 
-
+    // This is to make sure to guide the customer properly to get a close to efficient password.
+    if (
+        askLowerCase === false &&
+        askUpperCase === false &&
+        askNumeric  === false &&
+        askSpecialCharacters === false 
+        
+      ) {
+        alert("Please select at least one character type.");
+        generatePassword();
+      }
+    }
+    let password = "";
+    for (let i=0; i<passwordLength; i++){
+      password += everyCharacter.charAt(Math.floor(Math.random() * everyCharacter.length))
+    }
+    return password
+  }
+  
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
