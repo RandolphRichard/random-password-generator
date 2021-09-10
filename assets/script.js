@@ -14,6 +14,33 @@ var specialCharacter ="!@#$%^&*()_-+={[}]|:;<>.?/";
 
 let everyCharacter = "";
 
+// Those are the questions asked to have the Randomized password
+function generatePassword() {
+
+  let passwordLength = prompt(
+    "Please be mindfull that the password must be at least 8 characters and no more than 128 characters, How long do you want It to be?"
+  );
+  if (passwordLength < 8 || passwordLength > 128 || isNaN(parseInt(passwordLength))) {
+    alert("You haven't entered the right lenght that you want your password to be, Please enter a number between 8 and 128.");
+  } else {
+    let askLowerCase = confirm("Would you like to have Lower Case characters on your password ?");
+    if(askLowerCase){
+      everyCharacter += lowerCaseCharacter
+    };
+    let askUpperCase = confirm("Would you like to have Upper Case characters on your password ?");
+    if (askUpperCase){
+      everyCharacter += upperCaseCharacter
+    };
+    let askNumeric = confirm("Would you like to have Numbers on your password ?");
+    if (askNumeric){
+      everyCharacter += numericCharacter 
+    };
+    let askSpecialCharacters = confirm("Would you like to have Special Characters on your password?");
+    if (askSpecialCharacters){
+      everyCharacter += specialCharacter
+    };
+ 
+
 
 // Write password to the #password input
 function writePassword() {
