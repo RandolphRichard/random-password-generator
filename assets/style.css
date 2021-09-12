@@ -87,6 +87,7 @@ header {
   text-align: center;
   cursor: pointer;
 }
+
 .copyPassword{
   border: none;
   background-color: hsl(360, 91%, 36%);
@@ -95,11 +96,12 @@ header {
     0px;
   color: hsl(0, 0%, 100%);
   display: inline-block;
-  font-size: 16px;
+  font-size: 22px;
+  line-height: 22px;
   margin: 16px 16px 16px 20px;
   padding: 14px 34px;
-  cursor: pointer;
   text-align: center;
+  cursor: pointer;
  }
 
 button[disabled] {
@@ -139,6 +141,12 @@ button[disabled] {
     padding: 10px 15px;
   }
 
+  .copyPassword{
+    font-size: 1rem;
+    margin: 16px 0px 0px 0px;
+    padding: 10px 15px;
+  }
+
   #password {
     font-size: 1rem;
   }
@@ -146,6 +154,9 @@ button[disabled] {
 
 @media (max-width: 500px) {
   .btn {
+    font-size: 0.8rem;
+  }
+  .copyPassword{
     font-size: 0.8rem;
   }
 }
